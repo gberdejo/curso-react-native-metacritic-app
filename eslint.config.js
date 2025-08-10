@@ -12,7 +12,12 @@ module.exports = defineConfig([
       prettier: require("eslint-plugin-prettier"),
     },
     rules: {
-      "prettier/prettier": "error", // Muestra error si no está formateado
+      "prettier/prettier": [
+        "error",
+        {
+          trailingComma: "es5", // Permite comas finales opcionales
+        },
+      ],
     },
   },
 ]);
